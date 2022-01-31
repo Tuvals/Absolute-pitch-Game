@@ -164,6 +164,23 @@ def choose_random_chord():
   ch_index = random.choice([0,1,2,3,4])
   return ch_key, ch_index, chords_dict[ch_key][ch_index]
 
+"""creating new type of object - **Intervals**
+with attributes:
+
+*   **name** (string)
+*   **id** (int)
+*   **sound** (list)
+*   **num of correct answers** (int)
+*   **num of questions** (int)
+
+and **methods**:
+
+*   **score** - percent of  correct answers
+*   **play_sound** - required click to play sound
+*   **autoplay_sound** - auto play
+
+"""
+
 # creating "interval" object type
 class Interval:
     def __init__(self, name, id, sound, correct_answers, count_questions):
@@ -268,6 +285,23 @@ intervals_list_for_loading = [minor_2nd, major_2nd, minor_3rd, major_3rd, perfec
 #  loading list pf sounds for every interval object
 for i in range(len(intervals_list_for_loading)):
   intervals_list_for_loading[i].sound = intervals_dict[i+1]
+
+"""creating new type of object - **Chords**
+with attributes:
+
+*   **name** (string)
+*   **id** (int)
+*   **sound** (list)
+*   **num of correct answers** (int)
+*   **num of questions** (int)
+
+and **methods**:
+
+*   **score** - percent of  correct answers
+*   **play_sound** - required click to play sound
+*   **autoplay_sound** - auto play
+
+"""
 
 # creating "chords" object type
 class Chords:
@@ -454,13 +488,36 @@ def lets_play():
   print("\n"*3 + "*"*40 + "\nYou have guessed correctly " + str(chord_result) + " chords out of " + str(chord_rounds) +"!\n" + "*"*40)
   print(final_text_chord)
 
+"""The **Intervals and Chords practice** is a program which improve your musical hearing ability.
+
+You can choose between practicing intervals or chords,
+
+Every round you will asked to choose the number of steps that you like to practice, after that you will listen to the sound and you will be asked to select the correct interval / chord.
+
+The sound will keep coming until you achive over 60% of correct answers for each interval / chord
+"""
+
+def interval_num_of_steps():
+    while True:
+      interval_num_of_steps = input('How many steps would you like to practice?\n')
+      try:
+        val = int(interval_num_of_steps)
+        if val <= 12:
+          break
+        else:
+          print("Number can't be greater than 12")
+      except ValueError:
+        print("Steps must be a number, try again")
+    return val
+
 def intervals_practice():
 
   # making a list for loop through class objects
   intervals_list = [minor_2nd, major_2nd, minor_3rd, major_3rd, perfect_4th, tritone, perfect_5th, minor_6th, major_6th, minor_7th, major_7th, octave]
   
   
-  num_of_steps = int(input('How many steps would you like to practice?\n'))
+  num_of_steps = interval_num_of_steps()
+  
   print('Your options are:')
   #  print options to choose from
   for option in range(num_of_steps):
@@ -473,33 +530,58 @@ def intervals_practice():
   while True:
   # loop through intervals
     for i in range(num_of_steps):
-    # create random list
-      random.shuffle(intervals_list)  
-      if intervals_list[i].score() < 0.6:
-        # print(intervals_list[i].name, intervals_list[i].score())  # QA
-        intervals_list[i].autoplay_sound() 
-        sleep(0.05)
+      try:
+      # create random list
+        random.shuffle(intervals_list)  
+        if intervals_list[i].score() < 0.6:
+          # print(intervals_list[i].name, intervals_list[i].score())  # QA
+          intervals_list[i].autoplay_sound() 
+          sleep(0.05)
 
-        answer = input('What is the interval that you hear?\nType interval number\n')
-        # if correct answer
-        if int(answer) == intervals_list[i].id:
-          intervals_list[i].correct_answers += 1    
-          intervals_list[i].count_questions += 1
-          print('Correct answer!')
-        # if wrong answer  
-        else: 
-          intervals_list[i].count_questions += 1
-          print('Bad answer')
-      else:
-        correct_list.append(intervals_list[i])
-
-    # checking if all answers are correct   
+          answer = input('What is the interval that you hear?\nType interval number\n')
+          
+          # Checks if number is greater than num_of_steps
+          if int(answer) >  int(num_of_steps):
+            print("Number can't be greater than", num_of_steps, "\ntry again..")
+            break
+                  
+          # if correct answer
+          if int(answer) == intervals_list[i].id:
+            intervals_list[i].correct_answers += 1    
+            intervals_list[i].count_questions += 1
+            print('Correct answer!')
+          # if wrong answer  
+          else: 
+            intervals_list[i].count_questions += 1
+            print('Bad answer')
+        else:
+          correct_list.append(intervals_list[i])
+      except ValueError:
+          print("Sorry, I didn't understand that. Please insert an integer")
+          continue
+    # checks if all answers are correct   
     if len(set(correct_list)) == len(intervals_list):
       break
 
-
+  # reset values
+  for i in range(len(intervals_list)):
+    intervals_list[i].count_questions = 0
+    intervals_list[i].correct_answers = 0    
 
   print('The exercise ended successfully')
+
+def chord_num_of_steps():
+    while True:
+      chord_num_of_steps = input('How many steps would you like to practice?\n')
+      try:
+        val = int(chord_num_of_steps)
+        if val <= 8:
+          break
+        else:
+          print("Number can't be greater than 8")
+      except ValueError:
+        print("Steps must be a number, try again")
+    return val
 
 def chords_practice():
 
@@ -507,7 +589,8 @@ def chords_practice():
   chords_list = [Major, Minor, Diminished, Augmented, Dominant_7, Major_7, Minor_7, Minor_Major_7]
 
   
-  num_of_steps = int(input('How many steps would you like to practice?\n'))
+  num_of_steps = chord_num_of_steps()
+
   print('Your options are:')
   #  print options to choose from
   for option in range(num_of_steps):
@@ -520,25 +603,35 @@ def chords_practice():
   while True:
   # loop through intervals
     for i in range(num_of_steps):
-    # create random list
-      random.shuffle(chords_list)  
-      if chords_list[i].score() < 0.6:
-        chords_list[i].autoplay_sound() 
-        sleep(0.05)
+      try:
+          
+      # create random list
+        random.shuffle(chords_list)  
+        if chords_list[i].score() < 0.6:
+          chords_list[i].autoplay_sound() 
+          sleep(0.05)
 
-        answer = input('What is the chord that you hear?\nType interval number\n')
-        # if correct answer
-        if int(answer) == chords_list[i].id:
-          chords_list[i].correct_answers += 1    
-          chords_list[i].count_questions += 1
-          print('Correct answer!')
-        # if wrong answer  
-        else: 
-          chords_list[i].count_questions += 1
-          print('Bad answer')
-      else:
-        correct_list.append(chords_list[i])
+          answer = input('What is the chord that you hear?\nType interval number\n')
+          
+          # Checks if number is greater than num_of_steps
+          if int(answer) >  int(num_of_steps):
+            print("Number can't be greater than", num_of_steps, "\ntry again..")
+            break
 
+          # if correct answer
+          if int(answer) == chords_list[i].id:
+            chords_list[i].correct_answers += 1    
+            chords_list[i].count_questions += 1
+            print('Correct answer!')
+          # if wrong answer  
+          else: 
+            chords_list[i].count_questions += 1
+            print('Bad answer')
+        else:
+          correct_list.append(chords_list[i])
+      except ValueError:
+          print("Sorry, I didn't understand that. Please insert an integer")
+          continue
     # checking if all answers are correct   
     if len(set(correct_list)) == len(chords_list):
       break
