@@ -18,106 +18,106 @@ from time import sleep
 """loading sounds"""
 
 #Load the sounds into variables and sort them into dictionaries
-mn2a = Audio("/content/Minor 2nd - A.m4a", autoplay=True)
-mn2b = Audio("/content/Minor 2nd - B.m4a", autoplay=True)
-mn2c = Audio("/content/Minor 2nd - C.m4a", autoplay=True)
-mn2f_d = Audio("/content/Minor 2nd - F#.m4a", autoplay=True)
-mn2f = Audio("/content/Minor 2nd - F.m4a", autoplay=True)
-mj2a = Audio("/content/Major 2nd - A.m4a", autoplay=True)
-mj2c = Audio("/content/Major 2nd - C.m4a", autoplay=True)
-mj2d = Audio("/content/Major 2nd - D.m4a", autoplay=True)
-mj2e = Audio("/content/Major 2nd - E.m4a", autoplay=True)
-mj2g_d = Audio("/content/Major 2nd - G#.m4a", autoplay=True)
-mn3a = Audio("/content/Minor 3rd - A.m4a", autoplay=True)
-mn3c = Audio("/content/Minor 3rd - C.m4a", autoplay=True)
-mn3e = Audio("/content/Minor 3rd - E.m4a", autoplay=True)
-mn3f_d = Audio("/content/Minor 3rd - F#.m4a", autoplay=True)
-mn3g = Audio("/content/Minor 3rd - G.m4a", autoplay=True)
-mj3b = Audio("/content/Major 3rd - B.m4a", autoplay=True)
-mj3c = Audio("/content/Major 3rd - C.m4a", autoplay=True)
-mj3d_d = Audio("/content/Major 3rd - D#.m4a", autoplay=True)
-mj3e = Audio("/content/Major 3rd - E.m4a", autoplay=True)
-mj3f_d = Audio("/content/Major 3rd - F#.m4a", autoplay=True)
-p4a_d = Audio("/content/Perfect 4th - A#.m4a", autoplay=True)
-p4a = Audio("/content/Perfect 4th - A.m4a", autoplay=True)
-p4c = Audio("/content/Perfect 4th - C.m4a", autoplay=True)
-p4d_d = Audio("/content/Perfect 4th - D#.m4a", autoplay=True)
-p4f = Audio("/content/Perfect 4th - F.m4a", autoplay=True)
-tb = Audio("/content/Tritone - B.m4a", autoplay=True)
-tc_d = Audio("/content/Tritone - C#.m4a", autoplay=True)
-tc = Audio("/content/Tritone - C.m4a", autoplay=True)
-td = Audio("/content/Tritone - D.m4a", autoplay=True)
-tg = Audio("/content/Tritone - G.m4a", autoplay=True)
-p5a = Audio("/content/Perfect 5th - A.m4a", autoplay=True)
-p5b = Audio("/content/Perfect 5th - B.m4a", autoplay=True)
-p5d = Audio("/content/Perfect 5th - D.m4a", autoplay=True)
-p5e = Audio("/content/Perfect 5th - E.m4a", autoplay=True)
-p5f_d = Audio("/content/Perfect 5th - F#.m4a", autoplay=True)
-mn6a = Audio("/content/Minor 6th - A.m4a", autoplay=True)
-mn6b = Audio("/content/Minor 6th - B.m4a", autoplay=True)
-mn6d = Audio("/content/Minor 6th - D.m4a", autoplay=True)
-mn6f_d = Audio("/content/Minor 6th - F#.m4a", autoplay=True)
-mn6g_d = Audio("/content/Minor 6th - G#.m4a", autoplay=True)
-mj6b = Audio("/content/Major 6th - B.m4a", autoplay=True)
-mj6c = Audio("/content/Major 6th - C.m4a", autoplay=True)
-mj6d = Audio("/content/Major 6th - D.m4a", autoplay=True)
-mj6e = Audio("/content/Major 6th - E.m4a", autoplay=True)
-mj6g = Audio("/content/Major 6th - G.m4a", autoplay=True)
-mn7a_d = Audio("/content/Minor 7th - A#.m4a", autoplay=True)
-mn7b = Audio("/content/Minor 7th - B.m4a", autoplay=True)
-mn7c = Audio("/content/Minor 7th - C.m4a", autoplay=True)
-mn7d_d = Audio("/content/Minor 7th - D#.m4a", autoplay=True)
-mn7e = Audio("/content/Minor 7th - E.m4a", autoplay=True)
-mj7a_d = Audio("/content/Major 7th - A#.m4a", autoplay=True)
-mj7b = Audio("/content/Major 7th - B.m4a", autoplay=True)
-mj7e = Audio("/content/Major 7th - E.m4a", autoplay=True)
-mj7f = Audio("/content/Major 7th - F.m4a", autoplay=True)
-mj7g = Audio("/content/Major 7th - G.m4a", autoplay=True)
-oa = Audio("/content/Octave - A.m4a", autoplay=True)
-oc = Audio("/content/Octave - C.m4a", autoplay=True)
-od = Audio("/content/Octave - D.m4a", autoplay=True)
-of_d = Audio("/content/Octave - F#.m4a", autoplay=True)
-og = Audio("/content/Octave - G.m4a", autoplay=True)
-ca = Audio("/content/A.m4a", autoplay=True)
-cc = Audio("/content/C.m4a", autoplay=True)
-cd_d = Audio("/content/D#.m4a", autoplay=True)
-cd = Audio("/content/D.m4a", autoplay=True)
-cg_d = Audio("/content/G#.m4a", autoplay=True)
-cam = Audio("/content/Am.m4a", autoplay=True)
-cbm = Audio("/content/Bm.m4a", autoplay=True)
-cc_dm = Audio("/content/C#m.m4a", autoplay=True)
-cdm = Audio("/content/Dm.m4a", autoplay=True)
-cem = Audio("/content/Em.m4a", autoplay=True)
-ca_dd = Audio("/content/A#dim.m4a", autoplay=True)
-cad = Audio("/content/Adim.m4a", autoplay=True)
-ced = Audio("/content/Edim.m4a", autoplay=True)
-cf_dd = Audio("/content/F#dim.m4a", autoplay=True)
-cgd = Audio("/content/Gdim.m4a", autoplay=True)
-cc_da = Audio("/content/C#aug.m4a", autoplay=True)
-cca = Audio("/content/Caug.m4a", autoplay=True)
-cfa = Audio("/content/Faug.m4a", autoplay=True)
-cg_da = Audio("/content/G#aug.m4a", autoplay=True)
-cga = Audio("/content/Gaug.m4a", autoplay=True)
-ca7 = Audio("/content/A7.m4a", autoplay=True)
-cc7 = Audio("/content/C7.m4a", autoplay=True)
-ce7 = Audio("/content/E7.m4a", autoplay=True)
-cf_d7 = Audio("/content/F#7.m4a", autoplay=True)
-cg7 = Audio("/content/G7.m4a", autoplay=True)
-camj7 = Audio("/content/Amaj7.m4a", autoplay=True)
-cbmj7 = Audio("/content/Bmaj7.m4a", autoplay=True)
-ccmj7 = Audio("/content/Cmaj7.m4a", autoplay=True)
-cdmj7 = Audio("/content/Dmaj7.m4a", autoplay=True)
-cf_dmj7 = Audio("/content/F#maj7.m4a", autoplay=True)
-cam7 = Audio("/content/Am7.m4a", autoplay=True)
-ccm7 = Audio("/content/Cm7.m4a", autoplay=True)
-cd_dm7 = Audio("/content/D#m7.m4a", autoplay=True)
-cfm7 = Audio("/content/Fm7.m4a", autoplay=True)
-cg_dm7 = Audio("/content/G#m7.m4a", autoplay=True)
-cammj7 = Audio("/content/AmM7.m4a", autoplay=True)
-cdmmj7 = Audio("/content/DmM7.m4a", autoplay=True)
-cemmj7 = Audio("/content/EmM7.m4a", autoplay=True)
-cf_dmmj7 = Audio("/content/F#mM7.m4a", autoplay=True)
-cfmmj7 = Audio("/content/FmM7.m4a", autoplay=True)
+mn2a = "/content/Minor 2nd - A.m4a"
+mn2b = "/content/Minor 2nd - B.m4a"
+mn2c = "/content/Minor 2nd - C.m4a"
+mn2f_d = "/content/Minor 2nd - F#.m4a"
+mn2f = "/content/Minor 2nd - F.m4a"
+mj2a = "/content/Major 2nd - A.m4a"
+mj2c = "/content/Major 2nd - C.m4a"
+mj2d = "/content/Major 2nd - D.m4a"
+mj2e = "/content/Major 2nd - E.m4a"
+mj2g_d = "/content/Major 2nd - G#.m4a"
+mn3a = "/content/Minor 3rd - A.m4a"
+mn3c = "/content/Minor 3rd - C.m4a"
+mn3e = "/content/Minor 3rd - E.m4a"
+mn3f_d = "/content/Minor 3rd - F#.m4a"
+mn3g = "/content/Minor 3rd - G.m4a"
+mj3b = "/content/Major 3rd - B.m4a"
+mj3c = "/content/Major 3rd - C.m4a"
+mj3d_d = "/content/Major 3rd - D#.m4a"
+mj3e = "/content/Major 3rd - E.m4a"
+mj3f_d = "/content/Major 3rd - F#.m4a"
+p4a_d = "/content/Perfect 4th - A#.m4a"
+p4a = "/content/Perfect 4th - A.m4a"
+p4c = "/content/Perfect 4th - C.m4a"
+p4d_d = "/content/Perfect 4th - D#.m4a"
+p4f = "/content/Perfect 4th - F.m4a"
+tb = "/content/Tritone - B.m4a"
+tc_d = "/content/Tritone - C#.m4a"
+tc = "/content/Tritone - C.m4a"
+td = "/content/Tritone - D.m4a"
+tg = "/content/Tritone - G.m4a"
+p5a = "/content/Perfect 5th - A.m4a"
+p5b = "/content/Perfect 5th - B.m4a"
+p5d = "/content/Perfect 5th - D.m4a"
+p5e = "/content/Perfect 5th - E.m4a"
+p5f_d = "/content/Perfect 5th - F#.m4a"
+mn6a = "/content/Minor 6th - A.m4a"
+mn6b = "/content/Minor 6th - B.m4a"
+mn6d = "/content/Minor 6th - D.m4a"
+mn6f_d = "/content/Minor 6th - F#.m4a"
+mn6g_d = "/content/Minor 6th - G#.m4a"
+mj6b = "/content/Major 6th - B.m4a"
+mj6c = "/content/Major 6th - C.m4a"
+mj6d = "/content/Major 6th - D.m4a"
+mj6e = "/content/Major 6th - E.m4a"
+mj6g = "/content/Major 6th - G.m4a"
+mn7a_d = "/content/Minor 7th - A#.m4a"
+mn7b = "/content/Minor 7th - B.m4a"
+mn7c = "/content/Minor 7th - C.m4a"
+mn7d_d = "/content/Minor 7th - D#.m4a"
+mn7e = "/content/Minor 7th - E.m4a"
+mj7a_d = "/content/Major 7th - A#.m4a"
+mj7b = "/content/Major 7th - B.m4a"
+mj7e = "/content/Major 7th - E.m4a"
+mj7f = "/content/Major 7th - F.m4a"
+mj7g = "/content/Major 7th - G.m4a"
+oa = "/content/Octave - A.m4a"
+oc = "/content/Octave - C.m4a"
+od = "/content/Octave - D.m4a"
+of_d = "/content/Octave - F#.m4a"
+og = "/content/Octave - G.m4a"
+ca = "/content/A.m4a"
+cc = "/content/C.m4a"
+cd_d = "/content/D#.m4a"
+cd = "/content/D.m4a"
+cg_d = "/content/G#.m4a"
+cam = "/content/Am.m4a"
+cbm = "/content/Bm.m4a"
+cc_dm = "/content/C#m.m4a"
+cdm = "/content/Dm.m4a"
+cem = "/content/Em.m4a"
+ca_dd = "/content/A#dim.m4a"
+cad = "/content/Adim.m4a"
+ced = "/content/Edim.m4a"
+cf_dd = "/content/F#dim.m4a"
+cgd = "/content/Gdim.m4a"
+cc_da = "/content/C#aug.m4a"
+cca = "/content/Caug.m4a"
+cfa = "/content/Faug.m4a"
+cg_da = "/content/G#aug.m4a"
+cga = "/content/Gaug.m4a"
+ca7 = "/content/A7.m4a"
+cc7 = "/content/C7.m4a"
+ce7 = "/content/E7.m4a"
+cf_d7 = "/content/F#7.m4a"
+cg7 = "/content/G7.m4a"
+camj7 = "/content/Amaj7.m4a"
+cbmj7 = "/content/Bmaj7.m4a"
+ccmj7 = "/content/Cmaj7.m4a"
+cdmj7 = "/content/Dmaj7.m4a"
+cf_dmj7 = "/content/F#maj7.m4a"
+cam7 = "/content/Am7.m4a"
+ccm7 = "/content/Cm7.m4a"
+cd_dm7 = "/content/D#m7.m4a"
+cfm7 = "/content/Fm7.m4a"
+cg_dm7 = "/content/G#m7.m4a"
+cammj7 = "/content/AmM7.m4a"
+cdmmj7 = "/content/DmM7.m4a"
+cemmj7 = "/content/EmM7.m4a"
+cf_dmmj7 = "/content/F#mM7.m4a"
+cfmmj7 = "/content/FmM7.m4a"
 
 intervals_dict = {1:[mn2a, mn2b, mn2c, mn2f_d, mn2f], 
                   2:[mj2a, mj2c, mj2d, mj2e, mj2g_d],
@@ -164,7 +164,7 @@ def choose_random_chord():
   ch_index = random.choice([0,1,2,3,4])
   return ch_key, ch_index, chords_dict[ch_key][ch_index]
 
-# creating "interval" object type - for practice
+# creating "interval" object type
 class Interval:
     def __init__(self, name, id, sound, correct_answers, count_questions):
         self.name = name
@@ -179,86 +179,177 @@ class Interval:
         return score
 
     def autoplay_sound(self):
-        autoplay_sound = Audio(self.sound, autoplay=True)
+        # random.choice(self.sound) 
+        i = random.choice([0,1,2,3,4]) 
+        autoplay_sound = Audio(self.sound[i], autoplay=True)
         return display(autoplay_sound)
 
     def play_sound(self):
         play_sound = IPython.display.Audio(self.sound)
         return display(play_sound)
-        
+
 
 # creating all interval objects
 minor_2nd = Interval(name='Minor 2nd',
                      id = 1,
-                     sound = '/content/Minor 2nd - A.m4a',
+                     sound = [],
                      correct_answers = 0,
                      count_questions = 0)
 
 major_2nd = Interval(name='Major 2nd',
                      id = 2,
-                     sound = '/content/Major 2nd - A.m4a',
+                     sound = [],
                      correct_answers = 0,
                      count_questions = 0)
 
 minor_3rd = Interval(name='Minor 3rd',
                      id = 3,
-                     sound = '/content/Minor 3rd - A.m4a',
+                     sound = [],
                      correct_answers = 0,
                      count_questions = 0)
 
 major_3rd = Interval(name='Major 3rd',
                      id = 4,
-                     sound = '/content/Major 3rd - B.m4a',
+                     sound = [],
                      correct_answers = 0,
                      count_questions = 0)
 
 perfect_4th = Interval(name='Perfect 4th',
                        id = 5,
-                       sound = '/content/Perfect 4th - A.m4a',
+                       sound = [],
                        correct_answers = 0,
                        count_questions = 0)
 
 tritone = Interval(name='Tritone',
                    id = 6,
-                   sound = '/content/Tritone - B.m4a',
+                   sound = [],
                    correct_answers = 0,
                    count_questions = 0)
 
 perfect_5th = Interval(name='Perfect 5th',
                        id = 7,
-                       sound = '/content/Perfect 5th - A.m4a',
+                       sound = [],
                        correct_answers = 0,
                        count_questions = 0)
 
 minor_6th = Interval(name='Minor 6th',
                      id = 8,
-                     sound = '/content/Minor 6th - A.m4a',
+                     sound = [],
                      correct_answers = 0,
                      count_questions = 0)
 
 major_6th = Interval(name='Major 6th',
                      id = 9,
-                     sound = '/content/Major 6th - B.m4a',
+                     sound = [],
                      correct_answers = 0,
                      count_questions = 0)
 
 minor_7th = Interval(name='Minor 7th',
                      id = 10,
-                     sound = '/content/Minor 7th - A#.m4a',
+                     sound = [],
                      correct_answers = 0,
                      count_questions = 0)
 
 major_7th = Interval(name='Major 7th',
                      id = 11,
-                     sound = '/content/Major 7th - A#.m4a',
+                     sound = [],
                      correct_answers = 0,
                      count_questions = 0)
 
 octave = Interval(name='Octave',
                   id = 12,
-                  sound = '/content/Octave - A.m4a',
+                  sound = [],
                   correct_answers = 0,
                   count_questions = 0)
+
+
+intervals_list_for_loading = [minor_2nd, major_2nd, minor_3rd, major_3rd, perfect_4th, tritone, perfect_5th, minor_6th, major_6th, minor_7th, major_7th, octave]
+
+#  loading list pf sounds for every interval object
+for i in range(len(intervals_list_for_loading)):
+  intervals_list_for_loading[i].sound = intervals_dict[i+1]
+
+# creating "chords" object type
+class Chords:
+    def __init__(self, name, id, sound, correct_answers, count_questions):
+        self.name = name
+        self.id = id
+        self.sound = sound
+        self.correct_answers = correct_answers
+        self.count_questions = count_questions
+
+    def score(self):
+        
+        score = self.correct_answers / self.count_questions if self.count_questions else 0 # to avoid division by zero
+        return score
+
+    def autoplay_sound(self):
+        # random.choice(self.sound) 
+        i = random.choice([0,1,2,3,4]) 
+        autoplay_sound = Audio(self.sound[i], autoplay=True)
+        return display(autoplay_sound)
+
+    def play_sound(self):
+        play_sound = IPython.display.Audio(self.sound)
+        return display(play_sound)
+
+
+# creating all interval objects
+Major = Chords(name='Major',
+                     id = 1,
+                     sound = [],
+                     correct_answers = 0,
+                     count_questions = 0)
+
+Minor = Chords(name='Minor',
+                     id = 2,
+                     sound = [],
+                     correct_answers = 0,
+                     count_questions = 0)
+
+Diminished = Chords(name='Diminished',
+                     id = 3,
+                     sound = [],
+                     correct_answers = 0,
+                     count_questions = 0)
+
+Augmented = Chords(name='Augmented',
+                     id = 4,
+                     sound = [],
+                     correct_answers = 0,
+                     count_questions = 0)
+
+Dominant_7 = Chords(name='Dominant 7',
+                       id = 5,
+                       sound = [],
+                       correct_answers = 0,
+                       count_questions = 0)
+
+Major_7 = Chords(name='Major 7',
+                   id = 6,
+                   sound = [],
+                   correct_answers = 0,
+                   count_questions = 0)
+
+Minor_7 = Chords(name='Minor 7',
+                       id = 7,
+                       sound = [],
+                       correct_answers = 0,
+                       count_questions = 0)
+
+Minor_Major_7 = Chords(name='Minor Major 7',
+                     id = 8,
+                     sound = [],
+                     correct_answers = 0,
+                     count_questions = 0)
+
+
+
+chords_list_for_loading = [Major, Minor, Diminished, Augmented, Dominant_7, Major_7, Minor_7, Minor_Major_7]
+
+#  loading list pf sounds for every interval object
+for i in range(len(chords_list_for_loading)):
+  chords_list_for_loading[i].sound = chords_dict[i+1]
 
 #Function - Intervals game round
 def intervals_round(int_rounds):
@@ -269,7 +360,7 @@ def intervals_round(int_rounds):
   while round < int_rounds:
     round += 1
     checked_key, checked_index, current_sound = choose_random_interval()
-    display(current_sound)
+    display(Audio(current_sound, autoplay=True))
     sleep(0.05)
     print("What is the interval that you hear?")
     while True:
@@ -284,10 +375,12 @@ def intervals_round(int_rounds):
           continue
       else:
           break
-    final_text = final_text + "Round " + str(round) + " : Interval checked - " + interval_name[checked_key] + " (number " + str(checked_key) + ") and the response was " + str(user_answer) + "\n"
     if user_answer == checked_key:
       result += 1
-    else: result += 0
+      final_text = final_text + "Round {} [CORRECT]: Interval checked - {:<11} : The response was - {:<11}\n".format(round, interval_name[checked_key], interval_name[user_answer])
+    else: 
+      result += 0
+      final_text = final_text + "Round {} [WRONG]  : Interval checked - {:<11} : The response was - {:<11}\n".format(round, interval_name[checked_key], interval_name[user_answer])
   return result, final_text
 
 #Function - Chords game round
@@ -299,7 +392,7 @@ def chords_round(chord_rounds):
   while round < chord_rounds:
     round += 1
     checked_key, checked_index, current_sound = choose_random_chord()
-    display(current_sound)
+    display(Audio(current_sound, autoplay=True))
     sleep(3)
     print("What is the chord that you hear?")
     while True:
@@ -314,10 +407,12 @@ def chords_round(chord_rounds):
           continue
       else:
           break
-    final_text = final_text + "Round " + str(round) + " : Chord checked - " + chord_name[checked_key] + " (number " + str(checked_key) + ") and the response was " + str(user_answer) + "\n"
     if user_answer == checked_key:
       result += 1
-    else: result += 0
+      final_text = final_text + "Round {} [CORRECT]: Chord checked - {:<13} : The response was - {:<13}\n".format(round, chord_name[checked_key], chord_name[user_answer])
+    else: 
+      result += 0
+      final_text = final_text + "Round {} [WRONG]  : Chord checked - {:<13} : The response was - {:<13}\n".format(round, chord_name[checked_key], chord_name[user_answer])
   return result, final_text
 
 #Main playing function
@@ -346,17 +441,20 @@ def lets_play():
           continue
       else: break
   chord_result, final_text_chord = chords_round(chord_rounds)
-  calculated_result = (interval_result + chord_result) / (int_rounds + chord_rounds) *100
-
-  print("*"*50 + "\nYOUR RESULT IS " + "{:.2f}".format(calculated_result) + "%\n" + "*"*50)
+  while True:
+      try:
+          calculated_result = (interval_result + chord_result) / (int_rounds + chord_rounds) *100
+      except ZeroDivisionError:
+          calculated_result = 0
+          break
+      break
+  print("*"*50 + "\nYOUR RESULT IS " + "{:.2f}%".format(calculated_result) + "\n" + "*"*50)
   print("\n"*3 + "*"*40 + "\nYou have guessed correctly " + str(interval_result) + " intervals out of " + str(int_rounds) + "!\n" + "*"*40)
   print(final_text_interval)
   print("\n"*3 + "*"*40 + "\nYou have guessed correctly " + str(chord_result) + " chords out of " + str(chord_rounds) +"!\n" + "*"*40)
   print(final_text_chord)
 
-# Function - Intervals practice round
-
-def practice():
+def intervals_practice():
 
   # making a list for loop through class objects
   intervals_list = [minor_2nd, major_2nd, minor_3rd, major_3rd, perfect_4th, tritone, perfect_5th, minor_6th, major_6th, minor_7th, major_7th, octave]
@@ -377,7 +475,8 @@ def practice():
     for i in range(num_of_steps):
     # create random list
       random.shuffle(intervals_list)  
-      if intervals_list[i].score() < 0.7:
+      if intervals_list[i].score() < 0.6:
+        # print(intervals_list[i].name, intervals_list[i].score())  # QA
         intervals_list[i].autoplay_sound() 
         sleep(0.05)
 
@@ -402,7 +501,54 @@ def practice():
 
   print('The exercise ended successfully')
 
+def chords_practice():
+
+  # making a list for loop through class objects
+  chords_list = [Major, Minor, Diminished, Augmented, Dominant_7, Major_7, Minor_7, Minor_Major_7]
+
+  
+  num_of_steps = int(input('How many steps would you like to practice?\n'))
+  print('Your options are:')
+  #  print options to choose from
+  for option in range(num_of_steps):
+    print(chords_list[option].id, chords_list[option].name)
+
+  # slicing the list based on user choice
+  chords_list = chords_list[:num_of_steps]  
+
+  correct_list = []
+  while True:
+  # loop through intervals
+    for i in range(num_of_steps):
+    # create random list
+      random.shuffle(chords_list)  
+      if chords_list[i].score() < 0.6:
+        chords_list[i].autoplay_sound() 
+        sleep(0.05)
+
+        answer = input('What is the chord that you hear?\nType interval number\n')
+        # if correct answer
+        if int(answer) == chords_list[i].id:
+          chords_list[i].correct_answers += 1    
+          chords_list[i].count_questions += 1
+          print('Correct answer!')
+        # if wrong answer  
+        else: 
+          chords_list[i].count_questions += 1
+          print('Bad answer')
+      else:
+        correct_list.append(chords_list[i])
+
+    # checking if all answers are correct   
+    if len(set(correct_list)) == len(chords_list):
+      break
+
+
+
+  print('The exercise ended successfully')
+
 """Lets Play"""
 
-# lets_play()
-# practice()
+#lets_play()
+intervals_practice()
+
