@@ -9,7 +9,7 @@ Original file is located at
 Importing
 """
 
-#Load the relevant modules
+# Load the relevant modules
 import IPython
 from IPython.display import Audio
 import random
@@ -17,7 +17,7 @@ from time import sleep
 
 """loading sounds"""
 
-#Load the sounds into variables and sort them into dictionaries
+# Load the sounds into variables and sort them into dictionaries
 mn2a = "/content/Minor 2nd - A.m4a"
 mn2b = "/content/Minor 2nd - B.m4a"
 mn2c = "/content/Minor 2nd - C.m4a"
@@ -191,12 +191,11 @@ class Interval:
         self.count_questions = count_questions
 
     def score(self):
-        
         score = self.correct_answers / self.count_questions if self.count_questions else 0 # to avoid division by zero
         return score
 
+    # function that chooses random sound from the interval lilst and play it
     def autoplay_sound(self):
-        # random.choice(self.sound) 
         i = random.choice([0,1,2,3,4]) 
         autoplay_sound = Audio(self.sound[i], autoplay=True)
         return display(autoplay_sound)
@@ -279,10 +278,10 @@ octave = Interval(name='Octave',
                   correct_answers = 0,
                   count_questions = 0)
 
-
+# create list of objects 
 intervals_list_for_loading = [minor_2nd, major_2nd, minor_3rd, major_3rd, perfect_4th, tritone, perfect_5th, minor_6th, major_6th, minor_7th, major_7th, octave]
 
-#  loading list pf sounds for every interval object
+#  load list of sounds for every interval object
 for i in range(len(intervals_list_for_loading)):
   intervals_list_for_loading[i].sound = intervals_dict[i+1]
 
@@ -313,12 +312,10 @@ class Chords:
         self.count_questions = count_questions
 
     def score(self):
-        
         score = self.correct_answers / self.count_questions if self.count_questions else 0 # to avoid division by zero
         return score
 
     def autoplay_sound(self):
-        # random.choice(self.sound) 
         i = random.choice([0,1,2,3,4]) 
         autoplay_sound = Audio(self.sound[i], autoplay=True)
         return display(autoplay_sound)
@@ -378,10 +375,10 @@ Minor_Major_7 = Chords(name='Minor Major 7',
                      count_questions = 0)
 
 
-
+# create list of objects 
 chords_list_for_loading = [Major, Minor, Diminished, Augmented, Dominant_7, Major_7, Minor_7, Minor_Major_7]
 
-#  loading list pf sounds for every interval object
+# load list of sounds for every interval object
 for i in range(len(chords_list_for_loading)):
   chords_list_for_loading[i].sound = chords_dict[i+1]
 
@@ -497,6 +494,7 @@ Every round you will asked to choose the number of steps that you like to practi
 The sound will keep coming until you achive over 60% of correct answers for each interval / chord
 """
 
+# create a function that handles input 
 def interval_num_of_steps():
     while True:
       interval_num_of_steps = input('How many steps would you like to practice?\n')
@@ -516,6 +514,7 @@ def intervals_practice():
   intervals_list = [minor_2nd, major_2nd, minor_3rd, major_3rd, perfect_4th, tritone, perfect_5th, minor_6th, major_6th, minor_7th, major_7th, octave]
   
   
+# calls a function that handles input 
   num_of_steps = interval_num_of_steps()
   
   print('Your options are:')
@@ -570,6 +569,7 @@ def intervals_practice():
 
   print('The exercise ended successfully')
 
+# create a function that handles input 
 def chord_num_of_steps():
     while True:
       chord_num_of_steps = input('How many steps would you like to practice?\n')
@@ -585,14 +585,14 @@ def chord_num_of_steps():
 
 def chords_practice():
 
-  # making a list for loop through class objects
+  # create a list for loop through class objects
   chords_list = [Major, Minor, Diminished, Augmented, Dominant_7, Major_7, Minor_7, Minor_Major_7]
 
-  
+  # calls a function that handles input 
   num_of_steps = chord_num_of_steps()
 
   print('Your options are:')
-  #  print options to choose from
+  # print options to choose from
   for option in range(num_of_steps):
     print(chords_list[option].id, chords_list[option].name)
 
@@ -636,12 +636,16 @@ def chords_practice():
     if len(set(correct_list)) == len(chords_list):
       break
 
-
+  # reset values
+  for i in range(len(chords_list)):
+    chords_list[i].count_questions = 0
+    chords_list[i].correct_answers = 0    
 
   print('The exercise ended successfully')
 
 """Lets Play"""
 
 #lets_play()
-intervals_practice()
+# intervals_practice()
+chords_practice()
 
